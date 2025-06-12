@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>MinhaPagina</title>
+  <style>
+    /*Cabeçalho com o título da página*/
+    header{
+        border: 1px solid rgb(0, 0, 0);
+        padding: 15px;
+        background-color: rgb(150, 183, 234);
+    }
+    /* Configura o body visualmente*/
+    body{
+        justify-self: center;
+        background-color: rgb(173, 232, 241);
+    }
+    /* Oculta os inputs de rádio */
+    input[type="radio"] {
+      display: none;
+    }
+
+    /* Estilo dos botões de menu */
+    .menu label {
+      padding: 10px 15px;
+      background: #eee;
+      cursor: pointer;
+      margin-right: 5px;
+      border-radius: 5px;
+    }
+
+    .menu label:hover {
+      background: #ccc;
+    }
+
+    /* Conteúdo oculto por padrão */
+    .conteudo {
+      display: none;
+      max-width: 300px;
+      margin-top: 20px;
+    }
+
+    /* Mostra o conteúdo correspondente ao botão selecionado */
+    #tab1:checked ~ .conteudo1,
+    #tab2:checked ~ .conteudo2,
+    #tab3:checked ~ .conteudo3,
+    #tab4:checked ~ .conteudo4 {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <h1> Minha Página na Web</h1>
+        
+    </header>
+    <br>
+
+  <!-- Inputs ocultos que controlam a aba ativa -->
+  <input type="radio" name="tabs" id="tab1" checked>
+  <input type="radio" name="tabs" id="tab2">
+  <input type="radio" name="tabs" id="tab3">
+  <input type="radio" name="tabs" id="tab4">
+
+  <!-- Menu com labels que ativam os radios -->
+  <div class="menu">
+    <label for="tab1">Sobre Mim</label>
+    <label for="tab2">Educação</label>
+    <label for="tab3">Potfólio</label>
+    <label for="tab4">Contato</label>
+  </div>
+
+  <!-- Conteúdos de cada aba -->
+  <div class="conteudo conteudo1">
+    <h2>Sobre Mim</h2>
+    <p>Olá, seja bem-vindo(a) à minha página, eu sou o Eduardo e gosto de assistir séries e jogar vídeogames.</p>
+  </div>
+
+  <div class="conteudo conteudo2">
+    <h2>Educação</h2>
+    <p>Eu me formei no colégio Villanueva de Rolândia em 2021, tive uma passagem de um ano e meio em matemática na uel 
+        mas no final eu acabei largando para vir fazer o curso de jogos digitais na UNINTER. Neste meio tempo eu estudei inglês
+        na Five.
+    </p>
+  </div>
+
+  <div class="conteudo conteudo3">
+    <!-- Link do portfólio -->
+    <h2>Portfólio</h2>
+    <p>Eu tenho uma página da itch.io com os meus jogos, ela pode ser acessada pelo link a seguir:</p>
+    <a href="https://yuuedu.itch.io/">Minha Página</a>
+  </div>
+
+  <div class="conteudo conteudo4">
+    <!-- Formulário para contato -->
+    <h2>Contato</h2>
+     <form method="post">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+</body>
+</html>
